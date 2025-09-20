@@ -1,0 +1,93 @@
+/* Basic reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.5;
+}
+
+/* Page centering wrapper */
+.page {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+/* Links */
+a.link {
+  color: var(--color-navy);
+  text-decoration: none;
+}
+a.link:hover,
+a.link:focus {
+  text-decoration: underline;
+}
+
+/* Button base */
+.btn {
+  display: inline-block;
+  width: 100%;
+  border: 0;
+  border-radius: var(--radius-sm);
+  padding: 11px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+}
+.btn:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 2px;
+}
+.btn--primary {
+  background: var(--main-green);
+  color: var(--color-white);
+}
+.btn--primary:hover {
+  opacity: 0.95;
+}
+.btn--primary:active {
+  transform: translateY(0.5px);
+}
+
+/* Inputs */
+.form__label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155; /* slate-700-ish */
+  margin-bottom: 6px;
+}
+.form__input {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 1rem;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+  transition: border-color 120ms, box-shadow 120ms;
+}
+.form__input:focus {
+  outline: none;
+  border-color: var(--color-navy);
+  box-shadow: 0 0 0 3px rgba(6, 47, 91, 0.2);
+}
+
+.form__field {
+  margin-bottom: 16px;
+}

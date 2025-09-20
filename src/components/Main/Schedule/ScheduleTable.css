@@ -1,0 +1,136 @@
+/* Wrapper */
+.sched-wrap {
+  margin: 24px auto;
+  width: min(1000px, 94vw);
+}
+
+.sched-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.sched-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.sched-count {
+  min-width: 36px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3730a3;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card */
+.sched-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 36px rgba(20, 30, 55, 0.1);
+  border: 1px solid rgba(17, 24, 39, 0.06);
+  overflow: hidden;
+}
+
+/* Grid (5 equal columns for Mon–Fri) */
+.sched-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.sched-grid--header {
+  background: linear-gradient(180deg, #ffffff, #fafbff);
+  border-bottom: 1px solid rgba(17, 24, 39, 0.06);
+}
+
+.sched-colhead {
+  padding: 14px 12px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #64748b;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.sched-grid--body .sched-cell {
+  min-height: 120px;
+  padding: 14px 12px;
+  border-right: 1px solid rgba(17, 24, 39, 0.06);
+  border-top: 1px solid rgba(17, 24, 39, 0.04);
+  background: #fff;
+}
+.sched-grid--body .sched-cell:last-child {
+  border-right: none;
+}
+
+/* Empty placeholder */
+.sched-empty {
+  height: 92px;
+  display: grid;
+  place-items: center;
+  color: #c0c6cf;
+  font-weight: 700;
+}
+
+/* List of courses stacked vertically */
+.sched-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.sched-item {
+  padding: 10px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  transition: transform 0.06s ease, background 0.12s ease;
+}
+.sched-item:hover {
+  background: #f3f4f6;
+  transform: translateY(-1px);
+}
+
+.sched-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 900;
+  color: #0b1220;
+  background: #e8f0ff;
+  border: 1px solid rgba(17, 24, 39, 0.06);
+}
+
+.sched-sub {
+  margin-top: 6px;
+  font-size: 12.5px;
+  color: #6b7280;
+  line-height: 1.35;
+}
+
+/* Responsive: collapse columns */
+@media (max-width: 768px) {
+  .sched-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 520px) {
+  .sched-grid {
+    grid-template-columns: 1fr;
+  }
+  .sched-colhead {
+    text-align: left;
+    padding-left: 16px;
+  }
+}

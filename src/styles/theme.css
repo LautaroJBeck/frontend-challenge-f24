@@ -1,0 +1,23 @@
+:root {
+  /* Colors */
+  --color-navy: #062f5b;
+  --color-navy-600: #052647;
+  --color-text: rgb(34, 34, 34);
+  --color-muted: #6b7280;
+  --color-bg: #f1f5f9; /* slate-100-ish */
+  --color-white: #ffffff;
+  --color-border: #d1d5db; /* gray-300-ish */
+  --color-ring: #93c5fd; /* soft blue focus */
+  --color-green: rgb(220, 249, 242);
+  --color-blue2: #e4e3f5;
+  --main-green: #458189;
+  --main-green-600: #367176;
+  /* Sizing & Radius */
+  --radius: 12px;
+  --radius-sm: 8px;
+
+  /* Shadows */
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.08);
+}

@@ -1,0 +1,137 @@
+/* Card */
+.card {
+  width: 100%;
+  max-width: 480px;
+  background: var(--color-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+/* Header band */
+.card__header {
+  background: var(--main-green);
+  padding: 24px 32px;
+}
+
+/* Brand lockup */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #fff;
+}
+.brand__crest {
+  height: 40px;
+  width: 40px;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--main-green);
+  font-weight: 900;
+  font-size: 10px;
+  display: grid;
+  place-items: center;
+}
+.brand__title {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+.brand__subtitle {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+/* Body */
+.card__body {
+  padding: 24px 32px 28px;
+}
+.card__title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 4px 0 20px;
+  color: var(--color-text);
+}
+.placeholder {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 16px;
+  color: #666;
+  transition: 0.3s;
+  pointer-events: none;
+}
+.active-class {
+  top: -15px;
+  color: var(--main-green);
+  background-color: #fff;
+  z-index: 1000;
+}
+/* Password input with toggle */
+.input-form {
+  position: relative;
+}
+.input-form:focus-within > .placeholder {
+  top: -15px;
+  color: var(--main-green);
+  background-color: #fff;
+  z-index: 1000;
+}
+.input-form i {
+  position: absolute;
+  right: 20px; /* Adjust the value to position the icon correctly */
+  font-size: 20px;
+  top: 50%;
+  color: var(--gris);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.input-password__control {
+  padding-right: 80px; /* space for button */
+}
+.input-password__toggle {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.input-password__toggle:hover {
+  color: var(--color-text);
+}
+
+/* Links group */
+.links {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+.links__row {
+  display: flex;
+  gap: 18px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 420px) {
+  .card__body {
+    padding: 20px;
+  }
+  .card__header {
+    padding: 20px;
+  }
+  .brand__title {
+    font-size: 24px;
+  }
+}

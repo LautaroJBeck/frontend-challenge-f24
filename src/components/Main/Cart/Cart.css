@@ -1,0 +1,29 @@
+.incart-row {
+  display: flex;
+  grid-template-columns: minmax(220px, 1.2fr) 1fr auto;
+  align-items: center;
+  border-top: 1px solid rgba(17, 24, 39, 0.06);
+  transition: background 0.12s ease, box-shadow 0.12s ease;
+}
+.incart-row__left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.course-list {
+  overflow-y: auto;
+}
+.incart-row__code {
+  font-weight: 800;
+  font-size: 22px;
+  color: #1f2937;
+  flex-grow: 1;
+}
+.incart-remove {
+  font-size: 32px;
+  color: #ef4444;
+  flex-grow: 1;
+  text-align: end;
+  cursor: pointer;
+}

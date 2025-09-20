@@ -1,0 +1,47 @@
+.signup-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.55);
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(1.5px);
+}
+
+.signup-modal-box {
+  width: min(92vw, 520px);
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+.signup-modal-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.signup-modal-desc {
+  margin: 12px auto 22px;
+  line-height: 1.5;
+  color: #334155;
+  max-width: 420px;
+}
+
+.signup-button {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--main-green);
+  background: var(--main-green);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.signup-button:hover {
+  filter: brightness(1.05);
+}

@@ -1,0 +1,188 @@
+/* Container */
+.course-wrap {
+  padding: 12px 0 24px;
+  max-width: 420px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.course-wrap__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 0 12px;
+}
+
+.course-wrap__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: #2a2a2a;
+}
+
+.course-wrap__actions {
+  font-size: 14px;
+  color: #6b6f76;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Card */
+.course-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(31, 41, 55, 0.08);
+  border: 1px solid rgba(17, 24, 39, 0.06);
+  max-height: 650px;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* keep rounded corners while list scrolls */
+}
+
+/* Card head (column labels) */
+.course-card__head {
+  display: grid;
+  grid-template-columns: 1fr auto; /* left column + right column */
+  gap: 16px;
+  padding: 18px 20px 10px;
+  background: #ffffff;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.06);
+}
+.course-card__head-left {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  color: #9aa0a6;
+}
+
+.course-card__head-right {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 14px;
+  align-items: center;
+  justify-content: end;
+}
+
+.course-card__head-pilllabel {
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  color: #9aa0a6;
+}
+
+/* List */
+.course-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto; /* allow scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE & Edge */
+}
+.course-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Row */
+.course-row {
+  display: grid;
+  grid-template-columns: 1fr auto; /* <-- align with head: left + right */
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-top: 1px solid rgba(17, 24, 39, 0.06);
+  transition: background 0.12s ease, box-shadow 0.12s ease;
+  cursor: pointer;
+  background: #fff;
+}
+
+.course-row:first-child {
+  border-top: none;
+}
+
+.course-row:hover {
+  background: #fafbff;
+}
+
+.course-row--selected {
+  background-color: var(--main-green);
+}
+
+/* Left cluster */
+.course-row__left {
+  display: grid;
+  align-items: center;
+  row-gap: 2px;
+}
+
+.course-row__code {
+  font-weight: 800;
+  font-size: 22px;
+  color: #1f2937;
+}
+.course-included {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--main-green);
+}
+
+/* Right cluster (pills) */
+.course-row__right {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 14px;
+  align-items: center;
+  justify-content: end; /* aligns directly under QUAL/DIFF labels */
+}
+
+/* Pills */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 32px; /* slightly tighter to match header */
+  padding: 0 10px;
+  border-radius: 18px;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  box-shadow: inset 0 0 0 1px rgba(17, 24, 39, 0.05);
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* Tones */
+.pill--blue {
+  background: #e8f0ff;
+  color: #2563eb;
+}
+.pill--green {
+  background: #e9f9ef;
+  color: #10b981;
+}
+.pill--yellow {
+  background: #fff4db;
+  color: #d97706;
+}
+.pill--gray {
+  background: #eef1f4;
+  color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .course-row {
+    grid-template-columns: 1fr; /* stack on tiny screens */
+  }
+  .course-row__right {
+    justify-content: start;
+    margin-top: 8px;
+  }
+}
